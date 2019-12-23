@@ -1,0 +1,8 @@
+1.安装drf框架
+djangorestframework官方文档
+pip install djangrestframework
+pip install markdown      Markdown对可浏览API的支持。
+pip install django-filter    过滤支持。
+pip install django-crispy-forms      改进的HTML显示以进行过滤。
+pip install coreapi   模式生成支持。
+pip install django-guardian      对象级权限支持
