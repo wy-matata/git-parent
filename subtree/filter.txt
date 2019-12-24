@@ -24,3 +24,6 @@ class GoodslistViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     search_fields = ('^name', 'goods_brief', 'goods_desc')
     # 按字段排序
     ordering_fields = ('sold_num', 'add_time')
+
+dfsfwefwe
+ wefwefsf
