@@ -1,0 +1,3 @@
+[submodule "comodules"]
+	path = comodules
+	url = git@github.com:wy-matata/git-child.git
