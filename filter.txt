@@ -1,0 +1,26 @@
+# 引入drf filters
+from rest_framework import filters
+ 
+from goods.models import Goods
+ 
+class GoodslistViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+    商品列表页
+    """
+    queryset = Goods.objects.all()
+    serializer_class = GoodsSerializer  # 序列化类
+    pagination_class = GoodsPagination  # 配置分页
+    
+    # 搜索: filters.SearchFilter和search_field  
+    # 排序: filters.OrderingFilter 和ordering_fields
+    filter_backends = (DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
+ 
+    # 搜索
+    # search_fields 满足元组中所选字段的任意条件均会被筛选出来
+    # '^'开始 - 搜索。
+    # '='完全匹配。
+    # '@'全文搜索。（目前只支持Django的MySQL后端。）
+    # '$'正则表达式搜索。
+    search_fields = ('^name', 'goods_brief', 'goods_desc')
+    # 按字段排序
+    ordering_fields = ('sold_num', 'add_time')
