@@ -27,4 +27,4 @@ class GoodslistViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
 
 dfsfwefwe
  wefwefsf
-fsdfdsfgwerw
+fsdfdsfgwerw wfewfewf
